@@ -1,5 +1,5 @@
-FROM eclipse-temurin:21-jdk-alpine
+FROM openjdk:21
 WORKDIR /app
-COPY target/StudentsDemo-0.0.1-SNAPSHOT.jar .
+COPY target/StudentsDemo-0.0.1-SNAPSHOT.jar app/studentdemo.jar
 EXPOSE 8080
-CMD ["java", "-jar", "StudentsDemo-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "studentdemo.jar"]
